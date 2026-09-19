@@ -1,6 +1,8 @@
 # format-sage
 
-Une compétence (*skill*) Claude pour **générer, contrôler et relire les fichiers d'import à plat de Sage 100**, sur les trois modules : Comptabilité, Gestion commerciale, Immobilisations.
+**Générer, contrôler et relire les fichiers d'import à plat de Sage 100**, sur les trois modules : Comptabilité, Gestion commerciale, Immobilisations.
+
+Le dépôt réunit un catalogue de 223 drapeaux, un générateur et un validateur, utilisables en ligne de commande — et une compétence (*skill*) prête à installer dans **Claude**, qui donne à l'assistant la structure réelle du format au lieu de le laisser l'inventer. Un paquet équivalent pour **Mistral** est en préparation.
 
 Publié par [Melorio](https://www.melorio.fr), cabinet de conseil en gestion, partenaire Sage et Microsoft.
 
@@ -18,9 +20,9 @@ Trois conséquences pratiques, connues de tous ceux qui ont déjà produit ces f
 
 Un LLM à qui l'on demande ce fichier sans cadrage produit un résultat plausible et faux : bon nombre de lignes apparentes, mauvais encodage, drapeau inventé.
 
-## Ce que fait cette compétence
+## Ce que contient le dépôt
 
-Elle donne à l'assistant la structure réelle du format, vérifiée, et l'oblige à passer par des scripts plutôt que d'écrire le fichier à la main dans sa réponse.
+La compétence donne à l'assistant la structure réelle du format, vérifiée, et l'oblige à passer par les scripts plutôt que d'écrire le fichier à la main dans sa réponse.
 
 - **Un catalogue de 223 drapeaux** — 64 en Comptabilité (`#VER 31`), 116 en Gestion commerciale (`#VER 33`), 43 en Immobilisations (`#VER 23`) — avec pour chacun le nombre de champs, la cardinalité et l'arbre d'imbrication.
 - **Un niveau de fiabilité par drapeau**, explicite et non promotionnel :
@@ -63,7 +65,7 @@ Puis, dans Claude : *Paramètres → Capacités → Compétences → Téléverse
 
 La compétence se déclenche seule dès qu'il est question de produire ou de contrôler un fichier d'import Sage, même sans nommer de drapeau.
 
-### En ligne de commande, sans Claude
+### En ligne de commande, sans assistant
 
 Les deux scripts fonctionnent de façon autonome, sans dépendance hors bibliothèque standard (Python 3.9+).
 
@@ -123,11 +125,21 @@ Ouvrez une *issue* ou une *pull request*. Merci de ne joindre aucun extrait d'ex
 
 ## Portages
 
-Le catalogue et les deux scripts ne dépendent d'aucun assistant : ils s'utilisent en ligne de commande, et servent de socle aux différentes enveloppes. Le paquet publié ici est celui de Claude, seul testé à ce jour. **Un paquet équivalent pour Mistral est en préparation** ; les formats de compétence n'étant pas interchangeables, il fera l'objet d'une publication distincte dans ce dépôt.
+Le catalogue et les deux scripts ne dépendent d'aucun assistant : ils s'utilisent en ligne de commande et servent de socle aux différentes enveloppes.
 
-## Support
+**Claude** est aujourd'hui le seul assistant couvert. Le paquet publié ici est éprouvé sur des dossiers réels, dans les trois modules.
 
-Ce dépôt est libre d'usage. Melorio, cabinet de conseil en gestion et partenaire Sage, accompagne les reprises de données, les interfaçages et les migrations Sage 100 — c'est dans ce cadre que ce catalogue a été constitué. Pour un fichier à produire sous contrainte, un import qui échoue sans message exploitable ou un chantier de reprise à cadrer : [melorio.fr](https://www.melorio.fr).
+**Mistral** est en préparation. Les formats de compétence ne sont pas interchangeables — structure du paquet, déclenchement, accès aux scripts diffèrent — de sorte que ce paquet-ci ne fonctionne pas tel quel chez Mistral. Le portage fera l'objet d'une publication distincte dans ce dépôt, sur le même socle.
+
+## À propos de Melorio
+
+Melorio est un cabinet de conseil en gestion, partenaire Sage et Microsoft. Nous intervenons auprès des entreprises sur leurs systèmes de gestion : déploiement et exploitation de Sage 100, reprises de données, interfaçages entre applications, et reporting décisionnel sous Power BI.
+
+Ce catalogue n'est pas né d'un exercice de documentation : il s'est constitué dossier après dossier, au fil des reprises et des interfaces à construire, et chaque contrainte non documentée qu'il consigne a d'abord été un import rejeté chez un client. Nous le publions parce qu'un format d'échange gagne à être connu de tous ceux qui l'utilisent.
+
+Nous travaillons également à un **serveur MCP pour Sage 100**, qui ouvre la donnée du dossier à un assistant en lecture directe — interroger un plan comptable, retrouver une écriture, contrôler un paramétrage sans passer par un export. Il est en cours de développement et n'est pas publié ici ; les principes de rigueur sont les mêmes que pour ce catalogue.
+
+Ce dépôt est libre d'usage, sans contrepartie. Si vous préférez déléguer — un fichier à produire sous contrainte de délai, un import qui échoue sans message exploitable, une reprise de données à cadrer — écrivez-nous : [melorio.fr](https://www.melorio.fr).
 
 ## Licence
 
