@@ -4,7 +4,7 @@
 
 Le dépôt réunit un catalogue de 223 drapeaux, un générateur et un validateur, utilisables en ligne de commande — et une compétence (*skill*) prête à installer dans **Claude**, qui donne à l'assistant la structure réelle du format au lieu de le laisser l'inventer. Un paquet équivalent pour **Mistral** est en préparation.
 
-Publié par [Melorio](https://www.melorio.fr), cabinet de conseil en gestion, partenaire Sage et Microsoft.
+Publié par [Melorio](https://www.melorio.fr), intégrateur Sage et conseil en IA dans le domaine de la gestion.
 
 ---
 
@@ -133,7 +133,7 @@ Le catalogue et les deux scripts ne dépendent d'aucun assistant : ils s'utilise
 
 ## À propos de Melorio
 
-Melorio est un cabinet de conseil en gestion, partenaire Sage et Microsoft. Nous intervenons auprès des entreprises sur leurs systèmes de gestion : déploiement et exploitation de Sage 100, reprises de données, interfaçages entre applications, et reporting décisionnel sous Power BI.
+Melorio est intégrateur Sage et conseil en IA dans le domaine de la gestion. Partenaires Sage et Microsoft, nous intervenons auprès des entreprises sur leurs systèmes de gestion : déploiement et exploitation de Sage 100, reprises de données, interfaçages entre applications, reporting décisionnel sous Power BI, et mise en place d'assistants IA sur ces environnements.
 
 Ce catalogue n'est pas né d'un exercice de documentation : il s'est constitué dossier après dossier, au fil des reprises et des interfaces à construire, et chaque contrainte non documentée qu'il consigne a d'abord été un import rejeté chez un client. Nous le publions parce qu'un format d'échange gagne à être connu de tous ceux qui l'utilisent.
 
