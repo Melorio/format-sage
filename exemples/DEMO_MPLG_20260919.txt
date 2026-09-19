@@ -1,0 +1,52 @@
+#FLG 000
+#VER 31
+#DEV EUR
+#MPLG
+49500000
+0
+Prov. Comptes groupe
+Prov. Comptes gro
+6
+2
+
+
+1
+0
+0
+0
+0
+0
+0
+050123
+
+0
+0
+A20
+0
+0
+0
+#MPLG
+49600000
+0
+Prov. Comptes clients
+Prov. Comptes cli
+6
+2
+
+
+1
+0
+0
+0
+0
+0
+0
+050123
+
+0
+0
+A20
+0
+0
+0
+#FIN

@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.zip
+
+# Exports et fichiers d'import Sage : ne jamais versionner de donnees client
+*.txt
+!exemples/*.txt
+!format-sage/references/*.txt
